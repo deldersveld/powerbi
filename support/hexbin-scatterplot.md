@@ -2,8 +2,8 @@
 
 Power BI custom visual by David Eldersveld  
 
-### Contact me on Twitter - @dataveld 
-### Log an Issue on [GitHub](https://github.com/deldersveld/pbiHexbinScatterplot/issues)  
+### [Contact me on Twitter](https://twitter.com/dataveld) - @dataveld 
+### [Log an Issue on GitHub](https://github.com/deldersveld/pbiHexbinScatterplot/issues)  
 
 The Hexbin Scatterplot is a custom visual for Microsoft Power BI that displays points on top of hexagonal "bins". Color saturation for the hexbins shows the density of points within each bin, with darker bins showing more points.  
 
