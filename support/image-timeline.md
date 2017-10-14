@@ -2,7 +2,7 @@
 
 Power BI custom visual by David Eldersveld  
 
-### Contact me on ![Twitter](https://twitter.com/dataveld) @dataveld   
+### Contact me on Twitter - @dataveld 
 ### Log an Issue on ![GitHub](https://github.com/deldersveld/pbiImageTimeline/issues)  
 
 The Image Timeline is a custom visual for Microsoft Power BI that displays events along a horizontal timeline. Events appear as either circles or custom images.  
