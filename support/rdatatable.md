@@ -3,7 +3,7 @@
 Power BI custom visual by David Eldersveld  
 
 ### Contact me on Twitter - @dataveld 
-### Log an Issue on ![GitHub](https://github.com/deldersveld/rDataTable/issues)  
+### Log an Issue on [GitHub](https://github.com/deldersveld/rDataTable/issues)  
 
 Based on the [DT package](https://rstudio.github.io/DT/), **rDataTable** is an interactive Power BI **R** custom visual that helps you easily explore table data.  
 
