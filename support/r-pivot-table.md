@@ -1,60 +1,47 @@
 # R Pivot Table - Support
 
-Power BI custom visual by David Eldersveld  
+Power BI custom visual by [BlueGranite](https://www.blue-granite.com)  
 
-### [Contact me on Twitter](https://twitter.com/dataveld) - @dataveld 
 ### [Log an Issue on GitHub](https://github.com/deldersveld/pbiHexbinScatterplot/issues)  
+# R Pivot Table for Power BI
+An interactive R HTML *Pivot Table* for Microsoft Power BI from [BlueGranite](https://www.blue-granite.com).
 
-The Hexbin Scatterplot is a custom visual for Microsoft Power BI that displays points on top of hexagonal "bins". Color saturation for the hexbins shows the density of points within each bin, with darker bins showing more points.  
+### PREVIEW
+R Pivot Table is in early preview. It is in the process of being submitted to Microsoft AppSource. For limited use and testing, you can download **RPivotTable-1.0.1.6pbiviz** for non-production environments from the [*packaged-versions*](https://github.com/BlueGranite/RPivotTable-for-Power-BI/tree/master/packaged-versions) folder in this repository. There is no support currently offered for this visual while in preview, but please log any problems in the Issues section of this repository. 
 
-![](https://raw.githubusercontent.com/deldersveld/pbiHexbinScatterplot/master/assets/hexbin1.PNG)  
+### Using R Pivot Table by BlueGranite  
+R Pivot Table for Power BI is an interactive R HTML visual that relies on R's *rpivotTable* package. This visual is available for use in both Power BI Desktop and Service. As an R visual, it will not render in Power BI Report Server or the Mobile app. If using this visual in Power BI Desktop, be sure to install both the *htmlwidgets* and *rpivotTable* packages in your local R environment.
 
-![](https://raw.githubusercontent.com/deldersveld/pbiHexbinScatterplot/master/assets/hexbin2.PNG)  
+1) Add an instance of the R Pivot Table visual to the report canvas.  
+2) Add data to *Values*. The first value in the list will default to Rows. The second (if available) will default to columns. Additional fields will be available for use as desired.  
+3) Click and drag available fields to the dark "Row" and "Column" panes to dynamically build a pivot table.  
+4) Select options to change the appearance of the pivot table.  
 
-![](https://raw.githubusercontent.com/deldersveld/pbiHexbinScatterplot/master/assets/hexbin3.PNG)  
 
-## Functionality  
-- *Hexbins* - Add hexagonal bins behind the points of the scatterplot. Bins show the density of points using color, with darker bins representing more points in that bin.
-- *Points*- View points in a cartesian plane.
+### Format options
 
-## Fields
-The Image Timeline has options for four fields:  
-![](https://raw.githubusercontent.com/deldersveld/pbiHexbinScatterplot/master/assets/fields.PNG)  
-- *Details* - A required column containing individual data points.
-- *X Axis* - A measure / numeric field representing values along the X axis.
-- *Y Axis* - A measure / numeric field representing values along the Y axis.
-- *Point Saturation* - An optional measure / numeric field that appears on tooltips and can also be used to show point color saturation, with darker color representing a higher measure value.
+**Default display** - select the default view when a user opens the report: Table (default), Heatmap, or Table Barchart  
+**Font Size** - set the font size ranging from 10 to 20 (default 12)  
 
-## Format Options  
-There are several format options available to customize the scatterplot:  
+### Limitations
+There are several limitations to this pivot table that make it a good *exploratory* visual but not a good *explanatory* visual:
+1) Although R HTML visuals are interactive, you cannot select and filter other visuals by clicking inside the R visual.
+2) Pivot table will not save a user-selected state. You will always start with the defaults.
+3) There is no "freeze header" capability like you have in Excel.
+4) The Custom Visuals API does not currently expose format string for R visuals. The number of decimal places and formatting may not be what you expect based on other, non-R, visuals.
+5) Printing or exporting the filtered view is not available from the pivot table.
 
-Hexbin Scatterplot Options  
-![](https://raw.githubusercontent.com/deldersveld/pbiHexbinScatterplot/master/assets/format-options-hexbin.PNG) 
-- *Show bins* - Show or hide hexbins on the scatterplot.
-- *Show bin stats on hover* - Enable or disable the tooltip when hovering over a hexbin.
-- *Bin color* - Alter the color of the hexbins. This color represents the darkest in the color scale and the highest point density.
-- *Bin radius* - Alter the size of the hexbins, with options from 10 to 50.
-- *Bin outline* - Alter the color of the hexbin outline.
-- *Show points* - Show or hide points on the scatterplot.
-- *Point color* - Control base color of points. If saturation is used, this color represents the darkest in the color scale.
-- *Point size* - Control uniform size of points from 2 to 5 pixels.
 
-Axes Options  
-![](https://raw.githubusercontent.com/deldersveld/pbiHexbinScatterplot/master/assets/format-options-axes.PNG) 
-- *Show X axis* - Show or hide the X axis, ticks, and labels.
-- *X title* - Show or hide the X axis title.
-- *Show Y axis* - Show or hide the Y axis, ticks, and labels.
-- *Y title* - Show or hide the Y axis title.
-- *Origin at (0,0)* - Enable scatterplot to always start its grid at x = 0 and y = 0 (disabled by default).
+R Pivot Table requires both the htmlwidgets and rpivotTable R packages installed if you use the visual in Power BI Desktop. These packages are already available in Power BI Service.
+
+![](https://github.com/BlueGranite/RPivotTable-for-Power-BI/raw/master/images/RPivotTableSample.gif)  
+![](https://github.com/BlueGranite/RPivotTable-for-Power-BI/raw/master/images/rpivotTable.PNG)  
+![](https://github.com/BlueGranite/RPivotTable-for-Power-BI/raw/master/images/rpivotTable.gif)
 
 ## Version History  
-### 1.1.0 - October 13, 2017
-- Updated for new custom visual API version
-- Additional format options
-- Removed "rug" showing point distribution along axes
-### 0.9.4
-- Initial public release to Power BI Custom Visual Gallery
+### 1.0.1.6
+- Initial public version
 
 
 ## License  
-The Hexbin Scatterplot for Power BI is licensed under the MIT License.
+The R Pivot Table for Power BI is licensed under the MIT License.
